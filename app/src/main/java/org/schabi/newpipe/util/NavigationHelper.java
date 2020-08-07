@@ -18,6 +18,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import saml.bluetooth.powermeter.BluetoothScanActivity;
 
 import com.nostra13.universalimageloader.core.ImageLoader;
 
@@ -531,6 +532,11 @@ public final class NavigationHelper {
         mIntent.setData(Uri.parse(url));
         mIntent.putExtra(RouterActivity.INTERNAL_ROUTE_KEY, true);
         context.startActivity(mIntent);
+    }
+
+    public static void openBluetooth(final Context context) {
+        final Intent intent = new Intent(context, BluetoothScanActivity.class);
+        context.startActivity(intent);
     }
 
     public static void openAbout(final Context context) {

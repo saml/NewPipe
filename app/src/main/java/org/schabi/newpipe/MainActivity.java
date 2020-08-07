@@ -101,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
     private boolean servicesShown = false;
     private ImageView serviceArrow;
 
+    private static final int ITEM_ID_BLUETOOTH = -6;
     private static final int ITEM_ID_SUBSCRIPTIONS = -1;
     private static final int ITEM_ID_FEED = -2;
     private static final int ITEM_ID_BOOKMARKS = -3;
@@ -168,6 +169,10 @@ public class MainActivity extends AppCompatActivity {
             kioskId++;
         }
 
+        drawerItems.getMenu()
+                .add(R.id.menu_tabs_group, ITEM_ID_BLUETOOTH, ORDER,
+                        R.string.tab_bluetooth)
+                .setIcon(ThemeHelper.resolveResourceIdFromAttr(this, R.attr.ic_sports));
         drawerItems.getMenu()
                 .add(R.id.menu_tabs_group, ITEM_ID_SUBSCRIPTIONS, ORDER,
                         R.string.tab_subscriptions)
@@ -253,6 +258,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void tabSelected(final MenuItem item) throws ExtractionException {
         switch (item.getItemId()) {
+            case ITEM_ID_BLUETOOTH:
+                NavigationHelper.openBluetooth(this);
+                break;
             case ITEM_ID_SUBSCRIPTIONS:
                 NavigationHelper.openSubscriptionFragment(getSupportFragmentManager());
                 break;
@@ -423,6 +431,10 @@ public class MainActivity extends AppCompatActivity {
             kioskId++;
         }
 
+        drawerItems.getMenu()
+                .add(R.id.menu_tabs_group, ITEM_ID_BLUETOOTH, ORDER,
+                        R.string.tab_bluetooth)
+                .setIcon(ThemeHelper.resolveResourceIdFromAttr(this, R.attr.ic_sports));
         drawerItems.getMenu()
                 .add(R.id.menu_tabs_group, ITEM_ID_SUBSCRIPTIONS, ORDER, R.string.tab_subscriptions)
                 .setIcon(ThemeHelper.resolveResourceIdFromAttr(this, R.attr.ic_channel));

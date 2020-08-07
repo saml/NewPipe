@@ -33,6 +33,7 @@
     <string name="subscription_update_failed">Could not update subscription</string>
     <string name="show_info">Show info</string>
     <string name="tab_main">Main</string>
+    <string name="tab_bluetooth">Bluetooth</string>
     <string name="tab_subscriptions">Subscriptions</string>
     <string name="tab_bookmarks">Bookmarked Playlists</string>
     <string name="tab_new">New Tab</string>
@@ -350,6 +351,8 @@
     <string name="charset_letters_and_digits">Letters and digits</string>
     <string name="charset_most_special_characters">Most special characters</string>
     <string name="toast_no_player">No app installed to play this file</string>
+    <!-- Bluetooth -->
+    <string name="title_activity_bluetooth">Bluetooth Devices</string>
     <!-- About -->
     <string name="title_activity_about">About NewPipe</string>
     <string name="action_settings">Settings</string>
